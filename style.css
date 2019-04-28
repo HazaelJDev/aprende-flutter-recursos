@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+	padding: 0;
+	
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+.material-icons.red500 {
+    color: #F44336;
+}
+.material-icons.red500:hover{
+    color: #2196F3;
+}
+.material-icons.blue500{
+    color: #2196F3;
+}
+.material-icons.md-48{
+    font-size: 48px;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2.5fr;
+    grid-template-areas: 
+        "header header"
+        "info info"
+        "info info"
+        "info info"
+        "footer footer";
+}
+header{
+    grid-area: header;   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.info {
+    grid-area: info;
+    display: grid;
+    grid-template-areas: 
+    "desc desc"
+    "list list"
+    "list list";
+}
+
+.desc{
+    grid-area: desc;
+    display: grid;
+    grid-template-areas: 
+    "image description description"
+    "image description description"
+}
+.image{
+    grid-area: image;
+    width: 50%;
+    height: 50%;
+}
+.description{
+    text-align: center;
+    grid-area: description;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+
+.list{
+    
+    grid-area: list;
+    margin-left: 50px;
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+    color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: center;
+} 
+
+
+@media only screen and (max-width: 800px){
+    
+    body{
+        display: grid;
+        grid-template-columns: 5fr;
+        grid-template-rows: auto 2fr 2fr 2fr 1.25fr;
+        grid-template-areas: 
+            "header"
+            "info"
+            "info"
+            "info"
+            "footer";
+    }
+    
+    .desc{
+        grid-area: desc;
+        display: grid;
+        grid-template-areas: 
+        "image"
+        "description"
+        "description"
+    }
+    .image{
+        margin-left: 100px;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .description{
+        text-align: center;
+        grid-area: description;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .description h3{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-left: 50px;
+    }
+    .description h4{
+        margin-bottom: 50px;
+        padding-left: 50px;
+    }
+        
+}
